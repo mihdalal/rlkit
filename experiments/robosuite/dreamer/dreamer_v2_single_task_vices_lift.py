@@ -155,7 +155,7 @@ if __name__ == "__main__":
         "env_name": [
             "Lift",
         ],
-        "env_kwargs.reward_shaping": [True, False],
+        "env_kwargs.reward_shaping": [True], #run 1 more seed
     }
     sweeper = hyp.DeterministicHyperparameterSweeper(
         search_space,
