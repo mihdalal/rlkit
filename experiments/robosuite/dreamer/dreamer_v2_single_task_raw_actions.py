@@ -16,7 +16,7 @@ if __name__ == "__main__":
     parser.add_argument("--mode", type=str, default="local")
     parser.add_argument("--debug", action="store_true", default=False)
     args = parser.parse_args()
-    num_envs=10
+    num_envs = 10
     controller_configs = {
         "type": "OSC_POSE",
         "input_max": 1,
@@ -155,7 +155,7 @@ if __name__ == "__main__":
         "env_name": [
             "Lift",
         ],
-        "env_kwargs.reward_shaping":[True, False],
+        "env_kwargs.reward_shaping": [True, False],
     }
     sweeper = hyp.DeterministicHyperparameterSweeper(
         search_space,
