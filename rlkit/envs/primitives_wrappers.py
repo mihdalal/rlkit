@@ -787,7 +787,10 @@ class SawyerXYZEnvMetaworldPrimitives(SawyerXYZEnv):
                         render_im_shape[0],
                         render_im_shape[1],
                     )
-            r, info = self.evaluate_state(self._get_obs(), [*delta, 0])
+            if grasp:
+                r, info = self.evaluate_state(self._get_obs(), [*delta, -1])
+            else:
+                r, info = self.evaluate_state(self._get_obs(), [*delta, 0])
             total_reward += r
             total_success += info["success"]
         return np.array((total_reward, total_success))
