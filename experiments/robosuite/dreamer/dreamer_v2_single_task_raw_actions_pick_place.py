@@ -66,7 +66,7 @@ if __name__ == "__main__":
         version="normal",
         replay_buffer_size=int(5e3),
         algorithm_kwargs=algorithm_kwargs,
-        env_name="Lift",
+        env_name="PickPlaceBread",
         use_raw_actions=True,
         env_suite="robosuite",
         env_kwargs=dict(
@@ -81,20 +81,16 @@ if __name__ == "__main__":
             control_freq=40,
             reward_shaping=False,
             reset_action_space_kwargs=dict(
-                control_mode="vices",
+                control_mode="robosuite",
                 action_scale=1,
                 max_path_length=500,
-                workspace_low=(0.0, -0.2, 0.6),
-                workspace_high=(0.3, 0.2, 1),
+                workspace_low=(0, -0.7, 0.5),
+                workspace_high=(0.3, 0.6, 1.1),
                 camera_settings={
-                    "distance": 0.2613113661860936,
-                    "lookat": [
-                        -0.13466918548055004,
-                        -0.0808556895915784,
-                        0.898754837869992,
-                    ],
-                    "azimuth": 30.234375,
-                    "elevation": -34.21874942723662,
+                    "distance": 1.4728203140549079,
+                    "lookat": [-0.46263309, -0.07902517, 0.50766733],
+                    "azimuth": 179.6484375,
+                    "elevation": -45.000000565778464,
                 },
             ),
             usage_kwargs=dict(
@@ -153,9 +149,9 @@ if __name__ == "__main__":
 
     search_space = {
         "env_name": [
-            "Lift",
+            "PickPlaceBread",
         ],
-        "env_kwargs.reward_shaping": [True],  # run 1 more seed
+        "env_kwargs.reward_shaping": [False],
     }
     sweeper = hyp.DeterministicHyperparameterSweeper(
         search_space,
