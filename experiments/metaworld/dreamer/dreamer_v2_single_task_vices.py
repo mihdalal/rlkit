@@ -124,7 +124,7 @@ if __name__ == "__main__":
             "assembly-v2",
             "disassemble-v2",
         ],
-        "env_kwargs.reward_type":['dense', 'sparse']
+        "env_kwargs.reward_type": ["dense", "sparse"],
     }
     sweeper = hyp.DeterministicHyperparameterSweeper(
         search_space,
