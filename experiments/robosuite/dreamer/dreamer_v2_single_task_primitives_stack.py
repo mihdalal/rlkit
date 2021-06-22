@@ -67,7 +67,7 @@ if __name__ == "__main__":
         version="normal",
         replay_buffer_size=int(5e5),
         algorithm_kwargs=algorithm_kwargs,
-        env_name="Lift",
+        env_name="Stack",
         use_raw_actions=False,
         env_suite="robosuite",
         env_kwargs=dict(
@@ -85,8 +85,8 @@ if __name__ == "__main__":
                 control_mode="primitives",
                 action_scale=1,
                 max_path_length=5,
-                workspace_low=(0.0, -0.1, 0.6),
-                workspace_high=(0.3, 0.2, 1),
+                workspace_low=(0.0, -0.2, 0.6),
+                workspace_high=(0.3, 0.2, 1.2),
                 camera_settings={
                     "distance": 0.2613113661860936,
                     "lookat": [
