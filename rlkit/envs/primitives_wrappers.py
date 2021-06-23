@@ -1343,8 +1343,8 @@ class RobosuitePrimitives(DMControlBackendMetaworldRobosuiteEnv):
 
         reward, done, info = self._post_action(action)
         if self.control_mode == "primitives":
-            reward = float(stats[1] > 0)
-            info["success"] = float(stats[1] > 0)
+            reward = float(self._check_success())
+            info["success"] = float(self._check_success())
         else:
             info["success"] = float(self._check_success())
         return self._get_observations(force_update=True), reward, done, info
