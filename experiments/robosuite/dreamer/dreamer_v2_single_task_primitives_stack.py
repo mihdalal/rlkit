@@ -85,8 +85,8 @@ if __name__ == "__main__":
                 control_mode="primitives",
                 action_scale=1,
                 max_path_length=5,
-                workspace_low=(0.0, -0.2, 0.6),
-                workspace_high=(0.3, 0.2, 1.2),
+                workspace_low=(0.0, -0.25, 0.6),
+                workspace_high=(0.5, 0.25, 1.2),
                 camera_settings={
                     "distance": 0.2613113661860936,
                     "lookat": [

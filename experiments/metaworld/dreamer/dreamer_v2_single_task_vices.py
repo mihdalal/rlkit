@@ -121,8 +121,8 @@ if __name__ == "__main__":
             # "hand-insert-v2",
             # "soccer-v2",
             # "sweep-into-v2",
-            "assembly-v2",
-            "disassemble-v2",
+            "peg-unplug-side-v2",
+            # "disassemble-v2",
         ],
         "env_kwargs.reward_type": ["dense", "sparse"],
     }
